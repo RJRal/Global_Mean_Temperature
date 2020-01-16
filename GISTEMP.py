@@ -22,7 +22,16 @@ df.head() # what data do we want?
 
 temperature=df['Land and Ocean']
 
-temp=np.array(t)
+temp=np.array(temperature)
 temp.shape
 
 
+# Now let us plot the data 
+
+fig= plt.figure(figsize=(6,3))
+
+plt.plot(np.arange(0,len(temp))+1880,temp)
+plt.xlabel('year', size=14)
+plt.ylabel('anomalies from the mean', size=14)
+plt.title('The rise in global mean temperatures since 1880, a clear trend!',size=14)
+plt.show()
