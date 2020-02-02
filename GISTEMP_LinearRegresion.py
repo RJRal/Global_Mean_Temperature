@@ -39,10 +39,10 @@ print(yTest.shape)
 print(yPrediction.shape)
 
 
-plot.scatter(xTrain, yTrain, color = 'teal')
-plot.plot(xTrain, linearRegressor.predict(xTrain), color = 'firebrick')
-plot.title('Temperature vs Time (Training set)')
-plot.xlabel('Time')
-plot.ylabel('Temperature')
+plot.scatter(yTrain, xTrain , color = 'teal')
+plot.plot(linearRegressor.predict(xTrain),xTrain, color = 'firebrick')
+plot.title('Temperature Fluctuations vs Time (Training set)', size=16)
+plot.xlabel('Time', size=14)
+plot.ylabel('Temperature variations from the mean', size=14)
 plot.show()
 
